@@ -273,7 +273,7 @@
   }
   .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns:repeat(2, 1fr);
     gap:12px;
   }
   .gallery-item{
@@ -290,6 +290,7 @@
   }
   .gallery-item:hover img{transform:scale(1.05); filter:none}
   .gallery-item-tall{grid-row:span 2; aspect-ratio:4/6}
+  @media (max-width:600px){ .gallery{grid-template-columns:1fr} }
   .gallery-caption{
     position:absolute; bottom:0; right:0; left:0;
     background:linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
@@ -403,7 +404,7 @@
     <h1 class="hero-quote">
       שלושים שנה של בניית נכסים שעובדים: בדיקה לפני חתימה, נתונים לפני דעות.
     </h1>
-    <div class="hero-attribution">נדל"ן גריאטרי, ניהול השקעות וליווי עסקאות בצפון הארץ</div>
+    <div class="hero-attribution">נדל"ן גריאטרי, השבחה וליווי עסקאות בצפון הארץ</div>
   </div>
 </header>
 
@@ -434,13 +435,13 @@
 
     <div class="pillar">
       <span class="pillar-num">זירה 02</span>
-      <h3>ניהול השקעות</h3>
-      <p>תיקי מניות בישראל ובארה"ב בדגש על תנודתיות נמוכה ושימור הון, בעבודה יומית עם מודלי Markowitz ו-Sharpe.</p>
+      <h3>השבחה ותפנית</h3>
+      <p>אבחון עסקים ונכסים, זיהוי מנועי רווח, שיפור רווחיות והפיכת עסק תלוי-בעלים למערכת שעובדת עם הנהלה ובקרה.</p>
       <div class="pillar-fields">
-        <span>Swing Trading</span>
-        <span>IBKR</span>
-        <span>Exalens</span>
-        <span>Risk 2%</span>
+        <span>אבחון</span>
+        <span>מידול פיננסי</span>
+        <span>שיפור רווחיות</span>
+        <span>בקרה</span>
       </div>
     </div>
 
@@ -604,15 +605,11 @@
     <div class="section-marker">תיק עבודות</div>
     <h2 class="section-title">נכסים ועבודות</h2>
     <p class="section-intro">
-      דוגמה מהשטח: דירה מרוהטת להשכרה בשדרות אח"י אילת 5, קריית חיים, שהכנתי ושיווקתי כולל צילום, סרטון וחומרי פרסום.
+      דוגמה מהשטח: דירה מרוהטת להשכרה בקריות, שהכנתי ושיווקתי כולל צילום, סרטון וחומרי פרסום.
     </p>
   </div>
 
   <div class="gallery">
-    <div class="gallery-item gallery-item-tall">
-      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/08_building.jpg" alt="בניין שדרות אחי אילת 5" loading="lazy">
-      <div class="gallery-caption">אח"י אילת 5 · הבניין</div>
-    </div>
     <div class="gallery-item">
       <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/01_salon.jpg" alt="סלון דירה משופצת" loading="lazy">
       <div class="gallery-caption">סלון דירה</div>
@@ -628,10 +625,6 @@
     <div class="gallery-item">
       <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/06_balcony.jpg" alt="מרפסת" loading="lazy">
       <div class="gallery-caption">מרפסת</div>
-    </div>
-    <div class="gallery-item">
-      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/11_street_view.jpg" alt="נוף רחוב" loading="lazy">
-      <div class="gallery-caption">נוף רחוב</div>
     </div>
   </div>
 </section>
