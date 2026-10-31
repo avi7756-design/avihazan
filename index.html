@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אבי חזן</title>
+<meta name="description" content="אבי חזן - יזם נדל&quot;ן גריאטרי, אסטרטג בכיר ומנהל השקעות בצפון הארץ. כניסה אחת לכל העבודות, הכלים והקישורים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F2EC; --paper-deep:#EDE8DD; --ink:#1C1917; --ink-soft:#44403C;
+    --muted:#78716C; --rule:#D4CFC2; --walnut:#8B6F47; --walnut-deep:#6B5436;
+    --slate:#315D64;
+  }
+  @media (prefers-color-scheme: dark){
+    :not([data-theme="light"]):root{
+      --paper:#171412; --paper-deep:#1F1C19; --ink:#EDE8DD; --ink-soft:#C9C3B5;
+      --muted:#8B857A; --rule:#3A3530; --walnut:#C9A878; --walnut-deep:#A58658;
+      --slate:#6FA8AF;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171412; --paper-deep:#1F1C19; --ink:#EDE8DD; --ink-soft:#C9C3B5;
+    --muted:#8B857A; --rule:#3A3530; --walnut:#C9A878; --walnut-deep:#A58658;
+    --slate:#6FA8AF;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Assistant',system-ui,sans-serif;
+    background:var(--paper); color:var(--ink);
+    line-height:1.7; font-size:17px; min-height:100vh;
+    display:flex; flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ===== HEADER ===== */
+  .top{
+    padding:40px 32px 24px;
+    border-bottom:1px solid var(--rule);
+  }
+  .top-inner{
+    max-width:1100px; margin:0 auto;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:16px;
+  }
+  .logo{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:28px;
+    font-weight:900;
+    color:var(--ink);
+    letter-spacing:-0.5px;
+    text-decoration:none;
+  }
+  .top-meta{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.5px;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    flex:1;
+    display:flex; align-items:center;
+    padding:60px 32px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(ellipse at top left, rgba(139,111,71,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(49,93,100,0.06) 0%, transparent 50%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1100px; margin:0 auto; width:100%;
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .hero-left h1{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(48px, 8vw, 96px);
+    font-weight:900;
+    line-height:0.95;
+    letter-spacing:-2px;
+    color:var(--ink);
+    margin-bottom:24px;
+  }
+  .hero-left .subtitle{
+    font-size:20px;
+    color:var(--ink-soft);
+    max-width:460px;
+    line-height:1.55;
+    margin-bottom:40px;
+  }
+  .quick-cta{
+    display:flex; gap:12px; flex-wrap:wrap;
+  }
+  .quick-cta a{
+    display:inline-block;
+    padding:14px 24px;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    letter-spacing:0.5px;
+    text-decoration:none;
+    transition:all 0.3s;
+  }
+  .cta-primary{
+    background:var(--walnut);
+    color:var(--paper);
+    border:1px solid var(--walnut);
+  }
+  .cta-primary:hover{
+    background:transparent;
+    color:var(--walnut);
+  }
+  .cta-ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--rule);
+  }
+  .cta-ghost:hover{
+    border-color:var(--walnut);
+    color:var(--walnut);
+  }
+
+  .hero-right{
+    aspect-ratio:4/5;
+    background-image:
+      linear-gradient(135deg, rgba(139,111,71,0.1), transparent),
+      url('https://images.unsplash.com/photo-1758555835979-a154432f4caa?w=1200&q=80&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    filter:sepia(0.15);
+  }
+  .hero-right::after{
+    content:'';
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(139,111,71,0.4);
+    pointer-events:none;
+  }
+
+  /* ===== NAV CARDS ===== */
+  .cards-section{
+    padding:60px 32px 80px;
+    border-top:1px solid var(--rule);
+    background:var(--paper-deep);
+  }
+  .cards-inner{max-width:1100px; margin:0 auto}
+  .cards-head{
+    margin-bottom:40px;
+    display:flex; justify-content:space-between; align-items:baseline;
+    flex-wrap:wrap; gap:12px;
+  }
+  .cards-title{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:32px;
+    font-weight:700;
+    color:var(--ink);
+    letter-spacing:-0.5px;
+  }
+  .cards-sub{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--walnut);
+    letter-spacing:0.5px;
+  }
+
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+  .nav-card{
+    background:var(--paper);
+    padding:28px 24px;
+    text-decoration:none;
+    color:inherit;
+    transition:all 0.3s;
+    display:flex;
+    flex-direction:column;
+    min-height:160px;
+    position:relative;
+  }
+  .nav-card:hover{
+    background:var(--walnut);
+    color:var(--paper);
+  }
+  .nav-card:hover .card-tag{color:rgba(255,255,255,0.7)}
+  .nav-card:hover .card-arrow{opacity:1; transform:translateX(-4px)}
+
+  .card-tag{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--walnut);
+    letter-spacing:0.5px;
+    margin-bottom:12px;
+    transition:color 0.3s;
+  }
+  .card-title{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:22px;
+    font-weight:700;
+    line-height:1.15;
+    margin-bottom:8px;
+  }
+  .card-desc{
+    font-size:14px;
+    opacity:0.8;
+    line-height:1.5;
+    flex:1;
+  }
+  .card-arrow{
+    position:absolute;
+    bottom:24px; left:24px;
+    font-family:'Space Mono',monospace;
+    font-size:18px;
+    opacity:0.3;
+    transition:all 0.3s;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:32px;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    border-top:1px solid var(--rule);
+  }
+  footer a{color:var(--walnut); text-decoration:none; margin:0 10px}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px){
+    .hero-inner{grid-template-columns:1fr; gap:40px}
+    .hero-right{aspect-ratio:4/3; max-height:400px}
+    .hero{padding:40px 20px}
+    .cards-section, .top{padding-left:20px; padding-right:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP ===== -->
+<div class="top">
+  <div class="top-inner">
+    <a href="index.html" class="logo">אבי חזן</a>
+    <div class="top-meta">חיפה והקריות</div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<main class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1>אבי<br>חזן</h1>
+      <p class="subtitle">
+        יזם נדל"ן גריאטרי, מנהל השקעות ואסטרטג בכיר בצפון הארץ. 30+ שנים של בניית נכסים שעובדים.
+      </p>
+      <div class="quick-cta">
+        <a href="cv.html" class="cta-primary">קורות חיים</a>
+        <a href="profile.html" class="cta-ghost">פרופיל עסקי</a>
+      </div>
+    </div>
+    <div class="hero-right" aria-hidden="true"></div>
+  </div>
+</main>
+
+<!-- ===== CARDS - כל העבודות ===== -->
+<section class="cards-section">
+  <div class="cards-inner">
+    <div class="cards-head">
+      <h2 class="cards-title">מה תמצאו כאן</h2>
+      
+    </div>
+
+    <div class="cards-grid">
+
+      <a href="cv.html" class="nav-card">
+        <span class="card-tag">רקע מקצועי</span>
+        <div class="card-title">קורות חיים</div>
+        <div class="card-desc">ניסיון, תחומי התמחות ומערכות שבניתי.</div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a href="profile.html" class="nav-card">
+        <span class="card-tag">שיטת עבודה</span>
+        <div class="card-title">פרופיל עסקי</div>
+        <div class="card-desc">שלוש זירות פעילות, שישה עקרונות ומודל עבודה בחמישה שלבים.</div>
+        <span class="card-arrow">←</span>
+      </a>
+
+      <a href="mailto:avi7756@gmail.com?subject=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8" class="nav-card">
+        <span class="card-tag">יצירת קשר</span>
+        <div class="card-title">שליחת מייל</div>
+        <div class="card-desc">avi7756@gmail.com</div>
+        <span class="card-arrow">←</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="mailto:avi7756@gmail.com">avi7756@gmail.com</a>
+  <span>·</span>
+  <span>צילום חיפה: Unsplash</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אבי חזן · פרופיל עסקי</title>
+<meta name="description" content="פרופיל עסקי של אבי חזן. פילוסופיה, מודל העבודה והערכים המקצועיים של יזם נדל&quot;ן גריאטרי בכיר בצפון הארץ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F2EC; --paper-deep:#EDE8DD; --ink:#1C1917; --ink-soft:#44403C;
+    --muted:#78716C; --rule:#D4CFC2; --walnut:#8B6F47; --walnut-deep:#6B5436;
+    --slate:#315D64; --slate-deep:#1F4248;
+  }
+  @media (prefers-color-scheme: dark){
+    :not([data-theme="light"]):root{
+      --paper:#171412; --paper-deep:#1F1C19; --ink:#EDE8DD; --ink-soft:#C9C3B5;
+      --muted:#8B857A; --rule:#3A3530; --walnut:#C9A878; --walnut-deep:#A58658;
+      --slate:#6FA8AF; --slate-deep:#4A848B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171412; --paper-deep:#1F1C19; --ink:#EDE8DD; --ink-soft:#C9C3B5;
+    --muted:#8B857A; --rule:#3A3530; --walnut:#C9A878; --walnut-deep:#A58658;
+    --slate:#6FA8AF; --slate-deep:#4A848B;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Assistant',system-ui,sans-serif;
+    background:var(--paper); color:var(--ink);
+    line-height:1.7; font-size:17px; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ===== HERO - פילוסופיה פותחת ===== */
+  .hero{
+    min-height:85vh;
+    display:flex; align-items:center;
+    padding:80px 32px;
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(245,242,236,0.0) 0%, rgba(245,242,236,0.95) 80%),
+      url('https://images.unsplash.com/photo-1573322867448-1ba626bd9aeb?w=2000&q=80&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    border-bottom:1px solid var(--rule);
+  }
+  @media (prefers-color-scheme: dark){
+    :not([data-theme="light"]) .hero{
+      background:
+        linear-gradient(180deg, rgba(23,20,18,0.3) 0%, rgba(23,20,18,0.95) 80%),
+        url('https://images.unsplash.com/photo-1573322867448-1ba626bd9aeb?w=2000&q=80&auto=format&fit=crop');
+      background-size:cover;
+    }
+  }
+  .hero-inner{
+    max-width:1100px; margin:0 auto; width:100%;
+  }
+  .hero-eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--walnut);
+    letter-spacing:1.5px;
+    margin-bottom:40px;
+    display:flex; align-items:center; gap:16px;
+  }
+  .hero-eyebrow::before{
+    content:''; width:60px; height:1px; background:var(--walnut);
+  }
+  .hero-quote{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(32px, 5.5vw, 68px);
+    font-weight:500;
+    line-height:1.15;
+    color:var(--ink);
+    letter-spacing:-1px;
+    max-width:900px;
+  }
+  .hero-quote em{
+    font-style:italic;
+    color:var(--walnut);
+    font-weight:700;
+  }
+  .hero-attribution{
+    margin-top:32px;
+    font-family:'Assistant',sans-serif;
+    font-size:15px;
+    color:var(--ink-soft);
+    font-weight:500;
+  }
+  .hero-attribution::before{
+    content:none;
+  }
+
+  /* ===== GENERAL SECTION STYLES ===== */
+  main{max-width:1100px; margin:0 auto; padding:0 32px}
+  section{padding:100px 0; border-bottom:1px solid var(--rule)}
+  section:last-child{border-bottom:0}
+
+  .section-head{
+    margin-bottom:60px;
+    max-width:720px;
+  }
+  .section-marker{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--walnut);
+    letter-spacing:1px;
+    margin-bottom:16px;
+  }
+  .section-title{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(36px, 6vw, 56px);
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-1px;
+    color:var(--ink);
+    margin-bottom:20px;
+  }
+  .section-intro{
+    font-size:19px;
+    color:var(--ink-soft);
+    line-height:1.65;
+  }
+
+  /* ===== THREE PILLARS ===== */
+  .pillars{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:40px 56px;
+  }
+  .pillar{
+    position:relative;
+    padding-top:24px;
+    border-top:2px solid var(--walnut);
+  }
+  .pillar-num{
+    position:absolute;
+    top:-14px; right:0;
+    background:var(--paper);
+    padding-left:12px;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--walnut);
+    letter-spacing:1px;
+  }
+  .pillar h3{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:26px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:14px;
+    line-height:1.2;
+  }
+  .pillar p{
+    color:var(--ink-soft);
+    line-height:1.65;
+    margin-bottom:12px;
+  }
+  .pillar-fields{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.5px;
+    margin-top:16px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .pillar-fields span{
+    background:var(--paper-deep);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+
+  /* ===== PHILOSOPHY ===== */
+  .philosophy-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:start;
+  }
+  .philosophy-image{
+    position:sticky; top:40px;
+    aspect-ratio:3/4;
+    background-image:url('https://images.unsplash.com/photo-1624143523387-e8a8ba21e42a?w=1200&q=80&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    filter:grayscale(0.3) sepia(0.1);
+  }
+  .values{display:flex; flex-direction:column; gap:36px}
+  .value{
+    display:grid;
+    grid-template-columns:40px 1fr;
+    gap:20px;
+    align-items:baseline;
+  }
+  .value-num{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:36px;
+    font-weight:900;
+    color:var(--walnut);
+    line-height:1;
+  }
+  .value h4{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:22px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .value p{
+    color:var(--ink-soft);
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  /* ===== MODEL - תהליך העבודה כאקורדיון ===== */
+  .model-steps{display:flex; flex-direction:column; gap:0}
+  .step{
+    display:grid;
+    grid-template-columns:80px 1fr 180px;
+    gap:40px;
+    padding:36px 0;
+    border-top:1px solid var(--rule);
+    align-items:baseline;
+  }
+  .step:last-child{border-bottom:1px solid var(--rule)}
+  .step-num{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:56px;
+    font-weight:900;
+    color:var(--walnut);
+    line-height:1;
+  }
+  .step-content h4{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:26px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:10px;
+  }
+  .step-content p{
+    color:var(--ink-soft);
+    line-height:1.65;
+  }
+  .step-output{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:0.5px;
+    padding-right:16px;
+    border-right:2px solid var(--walnut);
+  }
+  .step-output strong{
+    display:block;
+    color:var(--walnut);
+    margin-bottom:4px;
+    font-size:11px;
+  }
+
+  /* ===== PORTFOLIO / GALLERY ===== */
+  .gallery-intro{
+    max-width:720px;
+    margin-bottom:40px;
+    color:var(--ink-soft);
+    font-size:17px;
+    line-height:1.65;
+  }
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+  }
+  .gallery-item{
+    aspect-ratio:4/3;
+    overflow:hidden;
+    position:relative;
+    background:var(--paper-deep);
+    cursor:pointer;
+  }
+  .gallery-item img{
+    width:100%; height:100%; object-fit:cover;
+    transition:transform 0.6s ease;
+    filter:grayscale(0.1);
+  }
+  .gallery-item:hover img{transform:scale(1.05); filter:none}
+  .gallery-item-tall{grid-row:span 2; aspect-ratio:4/6}
+  .gallery-caption{
+    position:absolute; bottom:0; right:0; left:0;
+    background:linear-gradient(0deg, rgba(0,0,0,0.8), transparent);
+    color:white;
+    padding:40px 20px 16px;
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.5px;
+    opacity:0;
+    transition:opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-caption{opacity:1}
+
+  /* ===== VIDEO ===== */
+  .video-section{
+    background:var(--paper-deep);
+    margin:0 -32px;
+    padding:80px 32px;
+  }
+  .video-inner{max-width:1100px; margin:0 auto}
+  .video-wrapper{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#000;
+    overflow:hidden;
+    margin-top:40px;
+  }
+  .video-wrapper video{
+    width:100%; height:100%; object-fit:cover;
+    display:block;
+  }
+
+  /* ===== CTA ===== */
+  .cta{
+    background:var(--ink);
+    color:var(--paper);
+    margin:0 -32px;
+    padding:100px 32px;
+    text-align:center;
+  }
+  .cta .section-marker{color:var(--walnut)}
+  .cta .section-title{color:var(--paper)}
+  .cta-text{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:22px;
+    font-style:italic;
+    opacity:0.85;
+    max-width:600px;
+    margin:0 auto 40px;
+    line-height:1.5;
+  }
+  .cta-actions{
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:16px 32px;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    letter-spacing:1px;
+    text-decoration:none;
+    transition:all 0.3s;
+    cursor:pointer;
+    border:1px solid var(--walnut);
+  }
+  .btn-primary{background:var(--walnut); color:var(--ink)}
+  .btn-primary:hover{background:transparent; color:var(--walnut)}
+  .btn-ghost{background:transparent; color:var(--walnut)}
+  .btn-ghost:hover{background:var(--walnut); color:var(--ink)}
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:40px 32px;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    background:var(--paper);
+  }
+  footer a{color:var(--walnut); text-decoration:none; margin:0 12px}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:900px){
+    .philosophy-grid{grid-template-columns:1fr}
+    .philosophy-image{position:static; aspect-ratio:16/9; margin-bottom:40px}
+    .step{grid-template-columns:60px 1fr; gap:20px}
+    .step-output{grid-column:2; margin-top:10px; border-right:0; border-top:1px solid var(--rule); padding-top:14px; padding-right:0}
+  }
+  @media (max-width:600px){
+    .hero{padding:60px 20px}
+    main{padding:0 20px}
+    .cta, .video-section{margin:0 -20px; padding:60px 20px}
+    .pillars{gap:40px}
+    .step{grid-template-columns:1fr; gap:16px}
+    .step-output{grid-column:1}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">אבי חזן, פרופיל עסקי</div>
+    <h1 class="hero-quote">
+      שלושים שנה של בניית נכסים שעובדים: בדיקה לפני חתימה, נתונים לפני דעות.
+    </h1>
+    <div class="hero-attribution">נדל"ן גריאטרי, ניהול השקעות וליווי עסקאות בצפון הארץ</div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== 3 PILLARS ===== -->
+<section id="pillars">
+  <div class="section-head">
+    <div class="section-marker">תחומי פעילות</div>
+    <h2 class="section-title">שלוש זירות, שיטת עבודה אחת</h2>
+    <p class="section-intro">
+      הזירות שונות אבל השיטה זהה: אבחון יסודי לפני פעולה, מידול מספרי של כל תרחיש, והגנה משפטית ותפעולית לפני כל חתימה.
+    </p>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <span class="pillar-num">זירה 01</span>
+      <h3>נדל"ן גריאטרי</h3>
+      <p>איתור, רכישה, השבחה והפעלה של בתי אבות ודיור מוגן בצפון. ליווי מההיתכנות ועד הפעלה שוטפת ברווחיות.</p>
+      <div class="pillar-fields">
+        <span>בתי אבות</span>
+        <span>דיור מוגן</span>
+        <span>רישוי</span>
+        <span>רגולציה</span>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">זירה 02</span>
+      <h3>ניהול השקעות</h3>
+      <p>תיקי מניות בישראל ובארה"ב בדגש על תנודתיות נמוכה ושימור הון, בעבודה יומית עם מודלי Markowitz ו-Sharpe.</p>
+      <div class="pillar-fields">
+        <span>Swing Trading</span>
+        <span>IBKR</span>
+        <span>Exalens</span>
+        <span>Risk 2%</span>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-num">זירה 03</span>
+      <h3>ליווי עסקאות</h3>
+      <p>בניית מבני עסקה, משא ומתן, ניסוח חוזים. הפחתת הסיכון המשפטי, הפיננסי והתפעולי של כל צד בעסקה.</p>
+      <div class="pillar-fields">
+        <span>חוזים</span>
+        <span>מו"מ</span>
+        <span>רישוי</span>
+        <span>משברים</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section id="philosophy">
+  <div class="section-head">
+    <div class="section-marker">פילוסופיה</div>
+    <h2 class="section-title">איך אני עובד</h2>
+    <p class="section-intro">
+      ששה עקרונות שלא נסוג מהם. הם המסננת שדרכה כל החלטה עוברת.
+    </p>
+  </div>
+
+  <div class="philosophy-grid">
+    <div class="philosophy-image" aria-hidden="true"></div>
+
+    <div class="values">
+      <div class="value">
+        <div class="value-num">1</div>
+        <div>
+          <h4>נתונים לפני דעות</h4>
+          <p>כל החלטה מהותית נבדקת מול מקורות אמינים ולפחות שתי חלופות - גם כשהחלטה נראית מובנת מאליה.</p>
+        </div>
+      </div>
+
+      <div class="value">
+        <div class="value-num">2</div>
+        <div>
+          <h4>אמת מקצועית</h4>
+          <p>גם כשהיא לא נוחה. כשמדובר בכסף של אנשים או ברישוי של רשות - אין מקום לייפות ואין מקום לכשל נימוס.</p>
+        </div>
+      </div>
+
+      <div class="value">
+        <div class="value-num">3</div>
+        <div>
+          <h4>סיכון לפני תשואה</h4>
+          <p>מודל שאפשר להסביר, גבולות שאפשר להגן עליהם, והגנה על ההון כבסיס. התשואה היא תוצר, לא מטרה.</p>
+        </div>
+      </div>
+
+      <div class="value">
+        <div class="value-num">4</div>
+        <div>
+          <h4>תוצאה מדידה</h4>
+          <p>מסמך, תוכנית פעולה, חישוב, נוסח מוכן. משהו שאפשר ליישם מחר בבוקר - לא רק להתלהב ממנו.</p>
+        </div>
+      </div>
+
+      <div class="value">
+        <div class="value-num">5</div>
+        <div>
+          <h4>פשטות אחרי מורכבות</h4>
+          <p>רק מי שהבין מערכת לעומק יכול להציג אותה בפשטות. פשטות שלא עברה דרך המורכבות היא הסתרה.</p>
+        </div>
+      </div>
+
+      <div class="value">
+        <div class="value-num">6</div>
+        <div>
+          <h4>אחריות משפטית</h4>
+          <p>הפחתת סיכון משפטי כחלק מהעסקה - בניסוח, במבנה, בבדיקה - ולא כמחשבה שאחרי החתימה.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MODEL ===== -->
+<section id="model">
+  <div class="section-head">
+    <div class="section-marker">מודל העבודה</div>
+    <h2 class="section-title">חמישה שלבים, מאבחון ועד יציאה</h2>
+    <p class="section-intro">
+      כל פרויקט - עסקה, השקעה, ליווי - עובר את אותם חמישה שלבים. כל שלב מסתיים במוצר שאפשר למדוד.
+    </p>
+  </div>
+
+  <div class="model-steps">
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>אבחון - איפה הערך האמיתי</h4>
+        <p>בדיקה יסודית של הנכס, העסקה או התיק. איתור הפערים, המגבלות, הסיכונים והפוטנציאל - בלי להסתמך על מה שכתוב בפרסום.</p>
+      </div>
+      <div class="step-output">
+        <strong>תוצר השלב</strong>
+        דוח אבחון מלא, רשימת סיכונים ושאלות פתוחות
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>מידול - חישוב התרחישים</h4>
+        <p>בניית מודל כלכלי שמציג שלושה תרחישים: שמרני, בסיס ואופטימי. כולל רגישויות לשינויים ברגולציה, בשוק ובעלויות התפעול.</p>
+      </div>
+      <div class="step-output">
+        <strong>תוצר השלב</strong>
+        מודל Excel עם 3 תרחישים, טבלת רגישויות ונקודת שוויון
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>בניית מבנה - חוזים ועסקאות</h4>
+        <p>ניסוח חוזים, מבני עסקה, מנגנוני התחשבנות וגידור. כל סעיף נבדק מול תרחיש הסיכון שהוא בא למנוע.</p>
+      </div>
+      <div class="step-output">
+        <strong>תוצר השלב</strong>
+        טיוטת חוזה מוכנה לעריכת עו"ד, מפת סיכונים ממופה
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>הפעלה והשבחה</h4>
+        <p>ליווי שוטף של ההפעלה, מדידת ביצועים מול המודל, התאמת האסטרטגיה בזמן אמת. הערך האמיתי נבנה אחרי החתימה.</p>
+      </div>
+      <div class="step-output">
+        <strong>תוצר השלב</strong>
+        דשבורד ביצועים, דוח רבעוני, התאמות שוטפות
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>יציאה - מתי ובאיזה תנאים</h4>
+        <p>תכנון תנאי יציאה כבר בשלב התכנון. מכירה, מימון מחדש או השארת הנכס בתיק - כל החלטה נבחנת מול יעדי התשואה והסיכון.</p>
+      </div>
+      <div class="step-output">
+        <strong>תוצר השלב</strong>
+        תוכנית יציאה, תחזית תזרים לקונה, מסמכי עסקה
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO IMAGES ===== -->
+<section id="portfolio">
+  <div class="section-head">
+    <div class="section-marker">תיק עבודות</div>
+    <h2 class="section-title">נכסים ועבודות</h2>
+    <p class="section-intro">
+      דוגמה מהשטח: דירה מרוהטת להשכרה בשדרות אח"י אילת 5, קריית חיים, שהכנתי ושיווקתי כולל צילום, סרטון וחומרי פרסום.
+    </p>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item gallery-item-tall">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/08_building.jpg" alt="בניין שדרות אחי אילת 5" loading="lazy">
+      <div class="gallery-caption">אח"י אילת 5 · הבניין</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/01_salon.jpg" alt="סלון דירה משופצת" loading="lazy">
+      <div class="gallery-caption">סלון דירה</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/05_kitchen.jpg" alt="מטבח" loading="lazy">
+      <div class="gallery-caption">מטבח</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/04_bedroom.jpg" alt="חדר שינה" loading="lazy">
+      <div class="gallery-caption">חדר שינה</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/06_balcony.jpg" alt="מרפסת" loading="lazy">
+      <div class="gallery-caption">מרפסת</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://avi7756-design.github.io/avi-sites/dira-gallery/images/11_street_view.jpg" alt="נוף רחוב" loading="lazy">
+      <div class="gallery-caption">נוף רחוב</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== VIDEO ===== -->
+<section class="video-section">
+  <div class="video-inner">
+    <div class="section-head" style="margin-bottom:0">
+      <div class="section-marker">סיור וידאו</div>
+      <h2 class="section-title">סיור וידאו בדירה</h2>
+      <p class="section-intro">
+        דוגמה של נכס השקעה שלי לאחר השבחה. הסיור מראה את המטבח, הסלון, חדר השינה והמרפסת.
+      </p>
+    </div>
+    <div class="video-wrapper">
+      <video controls poster="https://avi7756-design.github.io/avi-sites/dira-gallery/images/01_salon.jpg" preload="metadata">
+        <source src="https://avi7756-design.github.io/avi-sites/dira-gallery/tour-quick-24s.mp4" type="video/mp4">
+        הדפדפן שלך אינו תומך בוידאו.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="section-head" style="margin:0 auto 32px; max-width:720px; text-align:center">
+    <div class="section-marker">יצירת קשר</div>
+    <h2 class="section-title">בואו נדבר</h2>
+  </div>
+  <p class="cta-text">
+    יש לכם עסקה, נכס או השקעה שאתם רוצים לבדוק? אשמח לשמוע.
+  </p>
+  <div class="cta-actions">
+    <a href="mailto:avi7756@gmail.com?subject=פנייה%20מאתר%20פרופיל%20עסקי" class="btn btn-primary">שליחת מייל</a>
+    <a href="cv.html" class="btn btn-ghost">קורות חיים מלאים</a>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html">עמוד הבית</a>
+  <span>·</span>
+  <a href="cv.html">קורות חיים</a>
+  <span>·</span>
+  <span>צילומי חיפה: Unsplash</span>
+</footer>
+
+</body>
+</html>

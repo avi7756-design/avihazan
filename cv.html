@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אבי חזן · קורות חיים</title>
+<meta name="description" content="אבי חזן - יזם נדל&quot;ן גריאטרי ואסטרטג בכיר. 30+ שנות ניסיון בבתי אבות, דיור מוגן, ניהול השקעות ובנייה של עסקאות מורכבות בצפון הארץ.">
+<meta property="og:title" content="אבי חזן - קורות חיים">
+<meta property="og:description" content="30+ שנות ניסיון בנדל&quot;ן גריאטרי ובניהול השקעות. חיפה.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Assistant:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F5F2EC;
+    --paper-deep:#EDE8DD;
+    --ink:#1C1917;
+    --ink-soft:#44403C;
+    --muted:#78716C;
+    --rule:#D4CFC2;
+    --walnut:#8B6F47;
+    --walnut-deep:#6B5436;
+    --slate:#315D64;
+    --slate-deep:#1F4248;
+  }
+  @media (prefers-color-scheme: dark){
+    :not([data-theme="light"]):root{
+      --paper:#171412;
+      --paper-deep:#1F1C19;
+      --ink:#EDE8DD;
+      --ink-soft:#C9C3B5;
+      --muted:#8B857A;
+      --rule:#3A3530;
+      --walnut:#C9A878;
+      --walnut-deep:#A58658;
+      --slate:#6FA8AF;
+      --slate-deep:#4A848B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171412; --paper-deep:#1F1C19; --ink:#EDE8DD; --ink-soft:#C9C3B5;
+    --muted:#8B857A; --rule:#3A3530; --walnut:#C9A878; --walnut-deep:#A58658;
+    --slate:#6FA8AF; --slate-deep:#4A848B;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Assistant',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    font-size:17px;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--rule);
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(135deg, rgba(245,242,236,0.92) 0%, rgba(245,242,236,0.78) 60%, rgba(245,242,236,0.65) 100%),
+      url('https://images.unsplash.com/photo-1758555835963-a81e671ccbfb?w=2000&q=80&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    z-index:0;
+  }
+  @media (prefers-color-scheme: dark){
+    :not([data-theme="light"]) .hero-bg{
+      background-image:
+        linear-gradient(135deg, rgba(23,20,18,0.92) 0%, rgba(23,20,18,0.78) 60%, rgba(23,20,18,0.65) 100%),
+        url('https://images.unsplash.com/photo-1758555835963-a81e671ccbfb?w=2000&q=80&auto=format&fit=crop');
+    }
+  }
+  .hero-content{
+    position:relative; z-index:1;
+    max-width:1100px; margin:0 auto;
+    padding:80px 32px;
+    width:100%;
+  }
+  .hero-meta{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:1px;
+    color:var(--walnut);
+    margin-bottom:28px;
+    display:flex; gap:20px;
+    align-items:center;
+  }
+  .hero-meta::before{
+    content:''; display:inline-block;
+    width:40px; height:1px; background:var(--walnut);
+  }
+  .hero-name{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(56px, 11vw, 140px);
+    font-weight:900;
+    line-height:0.92;
+    letter-spacing:-2px;
+    color:var(--ink);
+    margin-bottom:12px;
+  }
+  .hero-role{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(22px, 3vw, 32px);
+    font-weight:400;
+    color:var(--ink-soft);
+    line-height:1.3;
+    max-width:620px;
+    margin-bottom:48px;
+    font-style:italic;
+  }
+  .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+    gap:0;
+    border-top:1px solid var(--rule);
+    padding-top:32px;
+    max-width:720px;
+  }
+  .stat{
+    padding-left:24px;
+    border-right:1px solid var(--rule);
+  }
+  .stat:first-child{border-right:0; padding-right:0}
+  .stat-num{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:48px; font-weight:700;
+    color:var(--walnut);
+    line-height:1;
+    display:flex; align-items:baseline; gap:4px;
+  }
+  .stat-num small{font-size:24px; color:var(--muted); font-weight:400}
+  .stat-label{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:6px;
+    letter-spacing:0.3px;
+  }
+
+  /* ===== BODY SECTIONS ===== */
+  main{max-width:1100px; margin:0 auto; padding:0 32px}
+  section{padding:80px 0; border-bottom:1px solid var(--rule)}
+  section:last-child{border-bottom:0}
+
+  .section-head{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:40px;
+    margin-bottom:48px;
+    align-items:baseline;
+  }
+  .section-marker{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--walnut);
+    letter-spacing:1px;
+  }
+  .section-title{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:clamp(32px, 5vw, 48px);
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-0.5px;
+    color:var(--ink);
+  }
+
+  /* ===== ABOUT ===== */
+  .about-text{
+    max-width:720px;
+    font-size:19px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    margin-right:240px;
+  }
+  .about-text p{margin-bottom:20px}
+  .about-text p:first-letter{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:64px;
+    font-weight:700;
+    float:right;
+    line-height:0.85;
+    margin:4px 0 0 10px;
+    color:var(--walnut);
+  }
+
+  /* ===== EXPERIENCE ===== */
+  .exp-item{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:40px;
+    margin-bottom:56px;
+    padding-bottom:56px;
+    border-bottom:1px solid var(--rule);
+  }
+  .exp-item:last-child{border-bottom:0; padding-bottom:0; margin-bottom:0}
+
+  .exp-period{
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--muted);
+    padding-top:8px;
+  }
+  .exp-period strong{display:block; color:var(--walnut); font-size:15px; margin-bottom:4px}
+
+  .exp-body h3{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:28px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:8px;
+    line-height:1.2;
+  }
+  .exp-org{
+    color:var(--slate);
+    font-weight:600;
+    font-size:15px;
+    margin-bottom:20px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .exp-org::before{content:'·'; color:var(--muted)}
+  .exp-body p{color:var(--ink-soft); margin-bottom:14px; line-height:1.65}
+  .exp-body ul{margin-right:20px; color:var(--ink-soft)}
+  .exp-body li{margin-bottom:8px; line-height:1.65}
+  .exp-body li::marker{color:var(--walnut)}
+
+  /* ===== EXPERTISE GRID ===== */
+  .expertise-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+  }
+  .expertise-item{
+    background:var(--paper);
+    padding:28px 24px;
+  }
+  .expertise-icon{
+    width:40px; height:40px;
+    margin-bottom:16px;
+    color:var(--walnut);
+  }
+  .expertise-item h4{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:22px;
+    font-weight:700;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .expertise-item p{color:var(--muted); font-size:15px; line-height:1.6}
+
+  /* ===== PROJECTS ===== */
+  .projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:24px;
+  }
+  .project{
+    background:var(--paper-deep);
+    padding:28px 24px;
+    position:relative;
+    border-right:3px solid var(--walnut);
+  }
+  .project-tag{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--walnut);
+    letter-spacing:0.5px;
+    margin-bottom:10px;
+  }
+  .project h4{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:var(--ink);
+    line-height:1.2;
+  }
+  .project p{color:var(--ink-soft); font-size:14px; line-height:1.6}
+
+  /* ===== CONTACT ===== */
+  .contact{
+    background:var(--ink);
+    color:var(--paper);
+    margin:0 -32px;
+    padding:80px 32px;
+    text-align:center;
+  }
+  .contact .section-head{display:block; margin-bottom:40px}
+  .contact .section-title{color:var(--paper)}
+  .contact-note{
+    font-family:'Frank Ruhl Libre',serif;
+    font-size:24px;
+    font-style:italic;
+    color:var(--paper);
+    opacity:0.85;
+    max-width:600px;
+    margin:0 auto 40px;
+    line-height:1.5;
+  }
+  .contact-form{
+    max-width:460px;
+    margin:0 auto;
+    text-align:right;
+  }
+  .form-row{margin-bottom:16px}
+  .form-row label{
+    display:block;
+    font-size:13px;
+    color:var(--walnut);
+    margin-bottom:6px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:0.5px;
+  }
+  .form-row input, .form-row textarea{
+    width:100%;
+    background:transparent;
+    border:0;
+    border-bottom:1px solid var(--muted);
+    color:var(--paper);
+    padding:10px 2px;
+    font-family:inherit;
+    font-size:16px;
+    outline:none;
+    transition:border-color 0.3s;
+  }
+  .form-row input:focus, .form-row textarea:focus{
+    border-bottom-color:var(--walnut);
+  }
+  .form-row textarea{min-height:80px; resize:vertical}
+  .contact-email{
+    display:inline-block;
+    margin-top:24px;
+    color:var(--walnut);
+    text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:16px;
+    border-bottom:1px solid var(--walnut);
+    padding-bottom:2px;
+  }
+  .contact-email:hover{color:var(--paper)}
+  .reveal-phone{
+    background:transparent;
+    border:1px solid var(--walnut);
+    color:var(--walnut);
+    padding:12px 24px;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    cursor:pointer;
+    letter-spacing:1px;
+    margin-top:20px;
+    transition:all 0.3s;
+  }
+  .reveal-phone:hover{
+    background:var(--walnut);
+    color:var(--ink);
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:40px 32px;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    color:var(--muted);
+    background:var(--paper);
+  }
+  footer a{color:var(--walnut); text-decoration:none; margin:0 12px}
+  footer a:hover{text-decoration:underline}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px){
+    .section-head{grid-template-columns:1fr; gap:12px}
+    .about-text{margin-right:0; font-size:17px}
+    .exp-item{grid-template-columns:1fr; gap:16px}
+    .hero-content{padding:60px 20px}
+    main{padding:0 20px}
+    .contact{margin:0 -20px; padding:60px 20px}
+    .stat{padding-left:16px}
+    .stat-num{font-size:40px}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important}
+    html{scroll-behavior:auto}
+  }
+
+  @media print{
+    .hero-bg{opacity:0.3}
+    .contact{background:#fff; color:#000}
+    section{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-meta">
+      <span>קורות חיים, חיפה</span>
+    </div>
+    <h1 class="hero-name">אבי חזן</h1>
+    <p class="hero-role">
+      יזם ואסטרטג בכיר בנדל"ן גריאטרי, בניהול השקעות ובהשבחת עסקאות מורכבות בצפון הארץ.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">30<small>+</small></div>
+        <div class="stat-label">שנות ניסיון בנדל"ן גריאטרי</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">זירות פעילות</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="section-head">
+    <div class="section-marker">על עצמי</div>
+    <h2 class="section-title">הסיפור, בקצרה</h2>
+  </div>
+  <div class="about-text">
+    <p>
+      שלושים שנה אני יושב בחיפה והקריות ובונה נכסים שעובדים. התחלתי בבתי אבות ובדיור מוגן בצפון, במקום שבו רגולציה, רישוי ותפעול נפגשים עם בני אדם בגיל רגיש. שם למדתי שהערך לא נמצא בקומה הראשונה - הוא נמצא בפרטים הקטנים: תזרים חודשי שעובד, חוזה שמחזיק מים, מערכת יחסים עם רשות שעוזרת ולא חוסמת.
+    </p>
+    <p>
+      היום אני פועל בשלושה מישורים במקביל - יזמות נדל"ן גריאטרי, ניהול תיק השקעות פעיל בשוקי ישראל וארה"ב, וליווי אסטרטגי של עסקאות מורכבות. בכל אחד מהם אני מביא את אותה הגישה: נתונים לפני דעות, סיכון לפני תשואה, ואמת מקצועית גם כשהיא לא נוחה.
+    </p>
+    <p>
+      הטיעון שלי פשוט - אם ניתן למדל אותו, לחשב אותו ולהגן עליו במשפט, הוא בר יישום. כל השאר הוא רעש.
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-head">
+    <div class="section-marker">ניסיון מקצועי</div>
+    <h2 class="section-title">מה עשיתי</h2>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-period">
+      <strong>פעיל</strong>
+      30+ שנה
+    </div>
+    <div class="exp-body">
+      <h3>יזם ואסטרטג בכיר</h3>
+      <div class="exp-org">נדל"ן גריאטרי - צפון הארץ</div>
+      <p>איתור, רכישה, השבחה והפעלה של מתקני דיור לגיל השלישי בחיפה ובקריות. ליווי של כל שרשרת הערך - מהיתכנות ראשונית ועד הפעלה שוטפת ברווחיות ולאורך זמן.</p>
+      <ul>
+        <li>בניית עסקאות מורכבות הכוללות היבטי רגולציה, רישוי ומימון</li>
+        <li>ניהול תפעולי ושיווקי של בתי אבות ודיור מוגן</li>
+        <li>השבחת רווחיות ומיצוב מחדש של נכסים קיימים</li>
+        <li>יצירת שותפויות ארוכות טווח עם משקיעים ומפעילים</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-period">
+      <strong>פעיל</strong>
+      ניהול יומי
+    </div>
+    <div class="exp-body">
+      <h3>מנהל השקעות - שוק ההון</h3>
+      <div class="exp-org">תיקי מניות ישראל וארה"ב</div>
+      <p>ניהול פעיל של תיק השקעות אישי באמצעות Interactive Brokers ו-Exalens Pro, בדגש על תנודתיות נמוכה ושימור הון.</p>
+      <ul>
+        <li>מסחר Swing על בסיס ניתוח יסודי וטכני משולב</li>
+        <li>שימוש במודלי Markowitz ו-Sharpe לבניית תיק מאוזן</li>
+        <li>פיתוח מערכות אוטומטיות לניתוח ולניטור (AVI HUNTER, v17.2 Platinum)</li>
+        <li>ניהול סיכון מתועד לפי כלל ה-2%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-period">
+      <strong>פעיל</strong>
+      תיק נכסים
+    </div>
+    <div class="exp-body">
+      <h3>ניהול נכסים להשכרה</h3>
+      <div class="exp-org">צפון הארץ</div>
+      <p>ניהול תיק נכסים להשכרה למגורים בחיפה ובקריות. אחריות מקצה לקצה - חוזים, גבייה, התקשרות עם שוכרים, תחזוקה ואופטימיזציית תזרים ומיסוי.</p>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="section-head">
+    <div class="section-marker">תחומי התמחות</div>
+    <h2 class="section-title">איפה אני חזק</h2>
+  </div>
+  <div class="expertise-list">
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 21h18M6 21V9l6-4 6 4v12M9 21v-6h6v6M10 11h.01M14 11h.01"/>
+      </svg>
+      <h4>נדל"ן גריאטרי</h4>
+      <p>בתי אבות, דיור מוגן ומתקני סיעוד - איתור, השבחה והפעלה. הכרה עמוקה ברגולציה ובתזרים הייחודי של התחום.</p>
+    </div>
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v20M5 9l7-7 7 7M5 15l7 7 7-7"/>
+      </svg>
+      <h4>עסקאות מורכבות</h4>
+      <p>בניית מבני עסקה, משא ומתן, ניסוח חוזים. הפחתת הסיכון המשפטי והפיננסי בכל צד של השולחן.</p>
+    </div>
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 3v18h18M7 14l4-4 4 4 6-6"/>
+      </svg>
+      <h4>ניהול השקעות</h4>
+      <p>תיקי מניות בישראל ובארה"ב. מידול, אסטרטגיה, ביצוע מסודר וניהול סיכונים מתועד.</p>
+    </div>
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2L4 6v6c0 5.5 3.5 10 8 11 4.5-1 8-5.5 8-11V6l-8-4z"/>
+      </svg>
+      <h4>ניהול סיכונים</h4>
+      <p>משפטי, פיננסי ותפעולי. זיהוי מוקדם, הערכה כמותית והפחתת חשיפה - לפני שהבעיה נהיית אירוע.</p>
+    </div>
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M11 4h5l2 2v12l-2 2h-5m0-16H7L5 6v12l2 2h4M11 4v16M8 10l2 2-2 2M15 10l-2 2 2 2"/>
+      </svg>
+      <h4>השבחת נכסים</h4>
+      <p>הפיכת נכסים ועסקים מתפקדים-בחסר למחוללי תזרים יציבים. ללא הבטחות שיווקיות, רק עם תוכניות פעולה.</p>
+    </div>
+
+    <div class="expertise-item">
+      <svg class="expertise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+      </svg>
+      <h4>ניהול משברים</h4>
+      <p>זיהוי, הכלה, התאוששות והחזרת יציבות. במיוחד בסביבות של רגולציה כבדה ובמערכות יחסים רגישות.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-head">
+    <div class="section-marker">מערכות עצמאיות</div>
+    <h2 class="section-title">מה בניתי</h2>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project">
+      <div class="project-tag">נדל"ן · AI</div>
+      <h4>מאסטרו נדל"ן</h4>
+      <p>מערכת איתור והשבחה של עסקאות נדל"ן בצפון. סימולטור כדאיות, מצפן אזורים ובודק דגלים אדומים.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">שוק הון · ניתוח</div>
+      <h4>AVI HUNTER</h4>
+      <p>מערכת ניתוח ובחירת מניות אוטומטית. דשבורד v4, מערכת ניהול סיכונים 2%, סימולטור תרחישים.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">מסחר · אוטומציה</div>
+      <h4>Trading System v17.2 Platinum</h4>
+      <p>מערכת מסחר אוטומטית מול IBKR עם שכבת הגנת סיכון וסורקים יומיים.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-tag">השקעות · ייעוץ</div>
+      <h4>יועץ השקעות חכם v12.3 PRO</h4>
+      <p>מערכת ניתוח השקעות עם 14 מודולים, Rolling 5Y+YTD, TA-35 TR ומצגת הסבריות מלאה לכל המלצה.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-head">
+    <div class="section-marker" style="color:var(--walnut)">יצירת קשר</div>
+    <h2 class="section-title">בואו נדבר</h2>
+  </div>
+  <p class="contact-note">
+    יש לך עסקה, נכס או שאלה אסטרטגית? אשמח לשמוע.
+  </p>
+  <form class="contact-form" onsubmit="event.preventDefault(); handleSubmit();">
+    <div class="form-row">
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">דוא"ל</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-row">
+      <label for="subject">נושא העסקה / הפנייה</label>
+      <input type="text" id="subject" name="subject">
+    </div>
+    <div class="form-row">
+      <label for="message">תיאור קצר</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+    <div style="text-align:center">
+      <a href="mailto:avi7756@gmail.com" class="contact-email">avi7756@gmail.com</a>
+      <br>
+      <button type="button" class="reveal-phone" onclick="revealPhone(this)">הצג מספר טלפון</button>
+    </div>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <a href="index.html">עמוד הבית</a>
+  <span>·</span>
+  <a href="profile.html">פרופיל עסקי</a>
+  <span>·</span>
+  <span>צילומי חיפה: Unsplash</span>
+</footer>
+
+<script>
+  function revealPhone(btn){
+    btn.outerHTML = '<a href="tel:+972525894424" class="contact-email" style="display:block;margin-top:12px">052-589-4424</a>';
+  }
+  function handleSubmit(){
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var subject=document.getElementById('subject').value||'פנייה מאתר קורות חיים';
+    var message=document.getElementById('message').value;
+    var body='שם: '+name+'%0D%0Aדוא"ל: '+email+'%0D%0A%0D%0A'+encodeURIComponent(message);
+    window.location.href='mailto:avi7756@gmail.com?subject='+encodeURIComponent(subject)+'&body='+body;
+  }
+</script>
+
+</body>
+</html>
